@@ -12,3 +12,21 @@
 ; RAM[3] = 1
 
 
+leaw $0, %A
+movw (%A), %D
+leaw $3, %A
+movw %D, (%A)
+; r0 = r3
+leaw $1, %A
+movw (%A), %D
+;d = r1
+leaw $0, %A
+movw %D, (%A)
+;R0 = r1
+leaw $3, %A
+movw (%A), %D
+; D = r0
+leaw $1, %A
+movw %D, (%A)
+leaw $3, %A
+movw $1, (%A)
